@@ -32,18 +32,21 @@ def load_model():
 
 model, tokenizer = load_model()
 
+# Sidebar for Clear Chat History
+with st.sidebar:
+    st.title('Chat Settings')
+    def clear_chat_history():
+        st.session_state.messages = [{"role": "assistant", "content": "Assalamu alaikum 🍁, I'm your personal chatbot, here to assist you! 😊"}]
+    st.button('Clear Chat History', on_click=clear_chat_history)
+
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = [{"role": "assistant", "content": "Assalamu alaikum 🍁, I'm your personal chatbot, here to assist you! 😊"}]
 
-# Display or clear chat messages
+# Display chat messages
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.write(message["content"])
-
-def clear_chat_history():
-    st.session_state.messages = [{"role": "assistant", "content": "Assalamu alaikum 🍁, I'm your personal chatbot, here to assist you! 😊"}]
-st.button('Clear Chat History', on_click=clear_chat_history)
 
 # Function to generate response
 def generate_response(input_text):
