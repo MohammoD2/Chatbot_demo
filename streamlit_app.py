@@ -4,9 +4,9 @@ import torch
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 import gdown
 import os
-
+# https://drive.google.com/file/d/1-oGXsn7E2FIivpWvMTm8ZazHoB9gzv-R/view?usp=sharing
 # Define the Google Drive file ID for model.safetensors
-GDRIVE_FILE_ID = "1-6yZ5hs5GuSjQPiCdrWzXxHG84PoheyQ"
+GDRIVE_FILE_ID = "1-oGXsn7E2FIivpWvMTm8ZazHoB9gzv-R"
 
 
 # Define the model path to save it locally
