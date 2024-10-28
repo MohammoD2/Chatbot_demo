@@ -8,7 +8,7 @@ import os
 st.set_page_config(page_title="🤖Personal Chatbot🤖")
 
 # Google Drive file ID for model.safetensors
-GDRIVE_FILE_ID = "1-6yZ5hs5GuSjQPiCdrWzXxHG84PoheyQ"
+GDRIVE_FILE_ID = "1-oGXsn7E2FIivpWvMTm8ZazHoB9gzv-R"
 MODEL_PATH = "model.safetensors"
 
 # Download model from Google Drive if it doesn't exist locally
